@@ -4,6 +4,8 @@
     namespace App\Models;
     
     
+    use App\Utils\Database;
+
     class Articles extends CoreModel
     {
         protected $title;
@@ -100,6 +102,18 @@
         {
             $this->updated_at = $updated_at;
         }
-        
+    
+        public static function findAll(): array
+        {
+            // connection BDD via PDO
+            $pdo= Database::getPDO();
+            // creation de la requete sql
+            $sql = '
+                SELECT *
+                FROM `articles`
+            ';
+            $pdoStatement = $pdo->query($sql);
+            return $pdoStatement->fetchAll(\PDO::FETCH_CLASS, self::class);
+        }
         
     }

@@ -4,11 +4,14 @@
     namespace App\Controllers;
     
     
+    use App\Models\Articles;
+    
     class MainController extends CoreController
     {
         public function home()
         {
-            $this->show('main/home');
+            $articleToDisplay = Articles::findAll();
+            $this->show('main/home', ['articlesToDisplay' => $articleToDisplay]);
         }
-
+        
     }
