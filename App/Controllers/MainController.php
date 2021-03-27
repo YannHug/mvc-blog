@@ -8,7 +8,7 @@
     {
         public function home()
         {
-            $this->show('home');
+            $this->show('main/home');
         }
 
     }
