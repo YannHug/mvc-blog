@@ -2,4 +2,12 @@
     <div class="navbar-brand">
         <a class="navbar-item" href="#">Logo-Blog</a>
     </div>
+    <section class="section">
+            <h1 class="title">
+                Blog MVC
+            </h1>
+            <p class="subtitle">
+                My first blog with <strong>MVC & Bulma</strong>!
+            </p>
+    </section>
 </nav>
