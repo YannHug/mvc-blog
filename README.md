@@ -29,13 +29,13 @@ Utilisation de [Bulma](https://bulma.io/) pour découvrir le framework et pour m
 Evolution au fur et à mesure des cours.
 
 TODO : 
--[x] Page Home avec les articles
--[x] Page pour afficher chaque article et les commentaires
--[ ] Ajouter index utilisateur / commentaire dans la BDD
--[ ] Page de connexion
--[ ] Page de création d'article
--[ ] Page de suppression d'article
--[ ] Page d'edition d'article
--[ ] Page de création de commentaire
--[ ] Page de suppression de commentaire
--[ ] Page d'edition de commentaire
+- [x] Page Home avec les articles
+- [x] Page pour afficher chaque article et les commentaires
+- [ ] Ajouter index utilisateur / commentaire dans la BDD
+- [ ] Page de connexion
+- [ ] Page de création d'article
+- [ ] Page de suppression d'article
+- [ ] Page d'edition d'article
+- [ ] Page de création de commentaire
+- [ ] Page de suppression de commentaire
+- [ ] Page d'edition de commentaire
