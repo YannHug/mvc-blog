@@ -7,7 +7,8 @@
                     <p class="subtitle"><?= $currentArticle->getSlug() ?></p>
                     <div class="content">
                         <p><?= $currentArticle->getIntroduction() ?></p>
-                        <a href="<?php // TODO mettre le lien vers l'article avec l'id dynamique //?>">En lire plus</a>
+                        <a href="<?= $router->generate('articles-page', ['id'=>$currentArticle->getId()]) ?>">En lire
+                        plus</a>
                     </div>
                     <time> <?= $currentArticle->getCreatedAt() ?></time>
                 </article>

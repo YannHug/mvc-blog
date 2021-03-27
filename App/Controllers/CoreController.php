@@ -8,6 +8,7 @@
     {
         protected function show(string $viewName, $viewData = [])
         {
+            global $router;
             // Comme $viewVars est déclarée comme paramètre de la méthode show()
             // les vues y ont accès
             // ici une valeur dont on a besoin sur TOUTES les vues

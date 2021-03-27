@@ -113,7 +113,23 @@
                 FROM `articles`
             ';
             $pdoStatement = $pdo->query($sql);
+            // fetchAll() pour récupérer plusieurs résultats
             return $pdoStatement->fetchAll(\PDO::FETCH_CLASS, self::class);
+        }
+    
+        public static function find($id)
+        {
+            // connection BDD via PDO
+            $pdo= Database::getPDO();
+            // creation de la requete sql
+            $sql = '
+                SELECT *
+                FROM `articles`
+                WHERE id = ' . $id
+            ;
+            $pdoStatement = $pdo->query($sql);
+            // fetchObject() pour récupérer un seul résultat
+            return $pdoStatement->fetchObject(self::class);
         }
         
     }

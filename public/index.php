@@ -47,6 +47,16 @@
         'main-home'
     );
     
+    $router->map(
+        'GET',
+        '/article/[i:id]',
+        [
+            'method' => 'article',
+            'controller' => '\App\Controllers\ArticleController'
+        ],
+        'articles-page'
+    );
+    
     /**
      * DISPATCHING
      */
