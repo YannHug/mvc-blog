@@ -2,6 +2,7 @@
     
     namespace App\Utils;
     
+    use Exception;
     use PDO;
 
 // Retenir son utilisation  => Database::getPDO()
@@ -41,7 +42,7 @@
                 );
             }
                 // ... mais si une erreur (Exception) survient, alors on attrape l'exception et on exécute le code que l'on souhaite (ici, on affiche un message d'erreur)
-            catch(\Exception $exception) {
+            catch(Exception $exception) {
                 echo 'Erreur de connexion...<br>';
                 echo $exception->getMessage().'<br>';
                 echo '<pre>';
@@ -57,7 +58,8 @@
          *
          * @return PDO
          */
-        public static function getPDO() {
+        public static function getPDO(): PDO
+        {
             // Si on n'a pas encore créé la seule instance de la classe
             if (empty(self::$_instance)) {
                 // Alors, on crée cette instance et on la stocke dans la propriété statique $_instance
