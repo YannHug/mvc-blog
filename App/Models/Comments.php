@@ -4,6 +4,9 @@
     namespace App\Models;
     
     
+    use App\Utils\Database;
+    use PDO;
+
     class Comments extends CoreModel
     {
         protected $author;
@@ -68,5 +71,16 @@
             $this->updated_at = $updated_at;
         }
         
-        
+        public static function findAllForArticle($id)
+        {
+            $pdo= Database::getPDO();
+            $sql = '
+                SELECT *
+                FROM `comments`
+                WHERE article_id =' . $id .'
+                ORDER BY `created_at` DESC
+                ';
+            $pdoStatement = $pdo->query($sql);
+            return $pdoStatement->fetchAll(PDO::FETCH_CLASS, self::class);
+        }
     }
