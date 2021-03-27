@@ -1,5 +1,5 @@
 composer.phar
-app/config.ini
+config.ini
 /vendor/
 /.idea
 
